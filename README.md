@@ -1,47 +1,41 @@
 # vibe — simple journaling
 
-Lightweight journaling app using Tkinter and SQLite.
+Lightweight journaling app built in C using GTK+ and SQLite.
 
 Requirements
-- Python 3
-- On Linux: `python3-tk` (package providing Tkinter)
+- GTK+ 3.0 development libraries
+- SQLite3 development libraries
+- On Linux: `libgtk-3-dev`, `libsqlite3-dev`, `pkg-config`
+
+Install dependencies (Ubuntu/Debian):
+
+```bash
+sudo apt update && sudo apt install libgtk-3-dev libsqlite3-dev pkg-config build-essential
+```
+
+Build
+
+```bash
+./build-c.sh
+```
 
 Run
 
 ```bash
-python3 /home/franklin/vibe-journal/main.py
+./vibe-journal
 ```
 
-Build a single-file executable (Linux/Ubuntu)
+Features
+- Create, edit, and delete journal entries
+- Search across title, content, and tags
+- Tag support (comma-separated)
+- WordPerfect 5.1-inspired color scheme (deep blue background, white text)
+- Copy/paste functionality via keyboard shortcuts (Ctrl+C/Ctrl+V/Ctrl+X) and right-click menu
+- Portable SQLite database storage (in same folder as executable)
 
-1. Install pipx if missing:
-
-```bash
-sudo apt update && sudo apt install pipx
-```
-
-2. Run the provided build script:
-
-```bash
-./build.sh
-```
-
-The resulting single-file executable will be at `dist/vibe-journal` (about 13MB).
-
-Run the executable:
-
-```bash
-./dist/vibe-journal
-```
-
-Copy `dist/vibe-journal` to your Dropbox or any Ubuntu machine and run it directly (no Python needed).
+The app stores entries in `vibe_journal.db` in the same folder as the executable.
 
 Notes
-- The app stores entries in `vibe_journal.db` in the same folder as the executable (for portability, e.g., in Dropbox).
-- Search uses simple LIKE matching across title, content, and tags.
-- Tags are stored as a comma-separated string on save.
-
-If you want, I can:
-- add export/import (JSON)
-- use per-day files instead of SQLite
-- add quick keyboard shortcuts
+- This is a C port of the original Python/Tkinter version
+- Maintains the same functionality and user interface design
+- Fully portable - can be copied to any Linux system with GTK+ installed
