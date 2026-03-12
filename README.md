@@ -23,6 +23,8 @@ make cpp      # builds vj executable
 ./build-c.sh
 ```
 
+Raw source is committed — just git clone and make cpp
+
 ## Run
 
 ```bash
