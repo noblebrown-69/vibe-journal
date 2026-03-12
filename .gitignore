@@ -1,23 +1,19 @@
-# Build artifacts
-vibe-journal
-vibe-journal-cpp
+# Build artifacts - keeps git history clean by ignoring compiled binaries and build dirs
 vj
 *.o
 build/
 dist/
-
-# Environment
-.venv/
 __pycache__/
-*.pyc
-
-# Data files
-vibe_journal.db
+*.tar.gz
+*.zip
+# Temporary files - autosave drafts and SQLite temp files not for version control
 autosave.temp
-
-# IDE/Editor
+*.db-journal
+# Editor junk - VS Code settings and vim swap files clutter repo
 .vscode/
-.idea/
+*.swp
+# DB lock - SQLite lock file, not portable across machines
+vibe_journal.db-journal
 *.swp
 *.swo
 *~
