@@ -1,0 +1,30 @@
+# Build artifacts
+vibe-journal
+vibe-journal-cpp
+vj
+*.o
+build/
+dist/
+
+# Environment
+.venv/
+__pycache__/
+*.pyc
+
+# Data files
+vibe_journal.db
+autosave.temp
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Misc
+*.docx
+*.spec

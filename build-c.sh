@@ -5,6 +5,7 @@ set -euo pipefail
 # Usage: ./build-c.sh
 
 echo "Building vibe-journal (C version)..."
+echo "Use 'make cpp' if you want to build the C++/gtkmm variant (see README)"
 
 # Check for required packages
 if ! pkg-config --exists gtk+-3.0; then
